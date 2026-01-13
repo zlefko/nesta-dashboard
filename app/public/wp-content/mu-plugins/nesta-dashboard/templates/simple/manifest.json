@@ -1,0 +1,42 @@
+{
+  "id": "simple",
+  "name": "Simple",
+  "description": "Clean starter template for fast launches.",
+  "version": "1.0.0",
+  "screenshot": "screenshot.jpeg",
+  "bundle": {
+    "export": "bundle/export.xml",
+    "uploads": "../shared/uploads.zip"
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "slug": "home"
+    },
+    "about": {
+      "title": "About",
+      "slug": "about"
+    },
+    "services": {
+      "title": "Services",
+      "slug": "services"
+    },
+    "contact": {
+      "title": "Contact",
+      "slug": "contact"
+    }
+  },
+  "settings": {
+    "customizer": "settings/customizer.json",
+    "additional_css": "settings/additional-css.css",
+    "colors": {
+      "primary": "#cc5a16",
+      "secondary": "#1d4ed8",
+      "text": "#0f172a"
+    },
+    "typography": {
+      "heading": "Inter",
+      "body": "Inter"
+    }
+  }
+}

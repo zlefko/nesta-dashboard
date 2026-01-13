@@ -1,0 +1,46 @@
+{
+  "id": "rugged",
+  "name": "Rugged",
+  "description": "Four-page starter with bundled assets and token-ready content.",
+  "version": "1.0.0",
+  "screenshot": "screenshot.jpeg",
+  "bundle": {
+    "export": "bundle/export.xml",
+    "uploads": "../shared/uploads.zip"
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "file": "pages/home.json",
+      "slug": "home"
+    },
+    "about": {
+      "title": "About",
+      "file": "pages/about.json",
+      "slug": "about"
+    },
+    "services": {
+      "title": "Services",
+      "file": "pages/services.json",
+      "slug": "services"
+    },
+    "contact": {
+      "title": "Contact",
+      "file": "pages/contact.json",
+      "slug": "contact"
+    }
+  },
+  "settings": {
+    "customizer": "settings/customizer.json",
+    "additional_css": "settings/additional-css.css",
+    "colors": {
+      "primary": "#cc5a16",
+      "secondary": "#1d4ed8",
+      "text": "#0f172a"
+    },
+    "typography": {
+      "heading": "Inter",
+      "body": "Inter"
+    }
+  }
+}

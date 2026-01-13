@@ -1,0 +1,46 @@
+{
+  "id": "modern",
+  "name": "Modern",
+  "description": "High-contrast layout with bold hero cards and flexible token-ready sections.",
+  "version": "1.0.0",
+  "screenshot": "screenshot.jpeg",
+  "bundle": {
+    "export": "bundle/export.xml",
+    "uploads": "../shared/uploads.zip"
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "file": "pages/home.json",
+      "slug": "home"
+    },
+    "about": {
+      "title": "About",
+      "file": "pages/about.json",
+      "slug": "about"
+    },
+    "services": {
+      "title": "Services",
+      "file": "pages/services.json",
+      "slug": "services"
+    },
+    "contact": {
+      "title": "Contact",
+      "file": "pages/contact.json",
+      "slug": "contact"
+    }
+  },
+  "settings": {
+    "customizer": "settings/customizer.json",
+    "additional_css": "settings/additional-css.css",
+    "colors": {
+      "primary": "#0f172a",
+      "secondary": "#10b981",
+      "text": "#1f2937"
+    },
+    "typography": {
+      "heading": "Poppins",
+      "body": "Inter"
+    }
+  }
+}

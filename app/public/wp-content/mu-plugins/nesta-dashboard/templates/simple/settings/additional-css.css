@@ -1,0 +1,11 @@
+/* Global blur / glass effect */
+.blur {
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+/* Optional: dark-mode variant */
+.dark .blur {
+	background: rgba(15, 23, 42, 0.45);
+	border-color: rgba(148, 163, 184, 0.4);
+}

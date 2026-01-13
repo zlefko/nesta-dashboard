@@ -1,0 +1,16 @@
+*
+!.gitignore
+
+!.github/
+!.github/workflows/
+
+!scripts/
+!scripts/build-mu-release.sh
+
+!app/
+!app/public/
+!app/public/wp-content/
+!app/public/wp-content/mu-plugins/
+!app/public/wp-content/mu-plugins/nesta-dashboard.php
+!app/public/wp-content/mu-plugins/nesta-dashboard/
+!app/public/wp-content/mu-plugins/nesta-dashboard/**

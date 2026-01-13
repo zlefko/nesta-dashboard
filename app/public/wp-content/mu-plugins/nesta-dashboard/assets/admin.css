@@ -1,0 +1,1596 @@
+/* Global admin theming ---------------------------------------------------- */
+body.nesta-admin-theme {
+    background: #f5f7fb;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #0f172a;
+}
+
+body.nesta-admin-theme #wpwrap {
+    background: linear-gradient(180deg, #f7f8fc 0%, #fbf7f0 60%, #fffdf8 100%);
+}
+
+/* Light Nesta skin for admin chrome ------------------------------------- */
+body.nesta-admin-theme #wpadminbar {
+    background: linear-gradient(180deg, #fff9f4 0%, #f7f4ef 100%);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+body.nesta-admin-theme #adminmenuback,
+body.nesta-admin-theme #adminmenuwrap,
+body.nesta-admin-theme #adminmenu {
+    background: linear-gradient(180deg, #fff7f1 0%, #f4f5fa 75%);
+    border-right: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+body.nesta-admin-theme #adminmenu,
+body.nesta-admin-theme #adminmenu .wp-submenu {
+    color: #2f3744;
+}
+
+body.nesta-admin-theme #adminmenu a {
+    color: #2f3744;
+}
+
+body.nesta-admin-theme #adminmenu .wp-menu-image:before {
+    color: #5a6272 !important;
+    transition: none !important;
+}
+
+body.nesta-admin-theme #adminmenu li:hover .wp-menu-image:before,
+body.nesta-admin-theme #adminmenu li a:focus .wp-menu-image:before,
+body.nesta-admin-theme #adminmenu li.opensub .wp-menu-image:before,
+body.nesta-admin-theme #adminmenu li.menu-top.wp-has-current-submenu .wp-menu-image:before,
+body.nesta-admin-theme #adminmenu li.menu-top.current .wp-menu-image:before {
+    color: #cc5a16 !important;
+}
+
+body.nesta-admin-theme #adminmenu div.wp-menu-image img {
+    filter: grayscale(1) brightness(0.55) !important;
+    opacity: 0.75 !important;
+    transition: filter 0.15s ease, opacity 0.15s ease;
+}
+
+body.nesta-admin-theme #adminmenu li:hover div.wp-menu-image img,
+body.nesta-admin-theme #adminmenu li a:focus div.wp-menu-image img,
+body.nesta-admin-theme #adminmenu li.opensub div.wp-menu-image img,
+body.nesta-admin-theme #adminmenu li.menu-top.wp-has-current-submenu div.wp-menu-image img,
+body.nesta-admin-theme #adminmenu li.menu-top.current div.wp-menu-image img {
+    filter: grayscale(0) sepia(1) saturate(10) hue-rotate(-45deg) brightness(0.78) !important;
+    opacity: 1 !important;
+}
+
+body.nesta-admin-theme #adminmenu div.wp-menu-image.svg {
+    filter: grayscale(1) brightness(0.65);
+    opacity: 0.85;
+    transition: filter 0.15s ease, opacity 0.15s ease;
+}
+
+body.nesta-admin-theme #adminmenu li:hover div.wp-menu-image.svg,
+body.nesta-admin-theme #adminmenu li a:focus div.wp-menu-image.svg,
+body.nesta-admin-theme #adminmenu li.opensub div.wp-menu-image.svg,
+body.nesta-admin-theme #adminmenu li.menu-top.wp-has-current-submenu div.wp-menu-image.svg,
+body.nesta-admin-theme #adminmenu li.menu-top.current div.wp-menu-image.svg {
+    filter: grayscale(0) sepia(1) saturate(10) hue-rotate(-45deg) brightness(0.78);
+    opacity: 1;
+}
+
+body.nesta-admin-theme #adminmenu #toplevel_page_hfcm .wp-menu-image {
+    filter: grayscale(1) brightness(0.6);
+    opacity: 0.8;
+    transition: filter 0.15s ease, opacity 0.15s ease;
+}
+
+body.nesta-admin-theme #adminmenu #toplevel_page_hfcm:hover .wp-menu-image,
+body.nesta-admin-theme #adminmenu #toplevel_page_hfcm:focus-within .wp-menu-image,
+body.nesta-admin-theme #adminmenu #toplevel_page_hfcm.wp-has-current-submenu .wp-menu-image {
+    filter: grayscale(0) sepia(1) saturate(10) hue-rotate(-45deg) brightness(0.78);
+    opacity: 1;
+}
+
+body.nesta-admin-theme #adminmenu .dashicons-hfcm {
+    filter: grayscale(1) brightness(0.25);
+    opacity: 0.65;
+    transition: filter 0.15s ease, opacity 0.15s ease;
+}
+
+body.nesta-admin-theme #adminmenu li:hover .dashicons-hfcm,
+body.nesta-admin-theme #adminmenu li a:focus .dashicons-hfcm,
+body.nesta-admin-theme #adminmenu li.opensub .dashicons-hfcm,
+body.nesta-admin-theme #adminmenu li.menu-top.wp-has-current-submenu .dashicons-hfcm,
+body.nesta-admin-theme #adminmenu li.menu-top.current .dashicons-hfcm {
+    filter: grayscale(0) sepia(1) saturate(10) hue-rotate(-45deg) brightness(0.6);
+    opacity: 1;
+}
+
+body.nesta-admin-theme #adminmenu li.menu-top:hover > a,
+body.nesta-admin-theme #adminmenu li.menu-top > a:focus {
+    background: rgba(255, 122, 24, 0.12);
+    color: #a0470f;
+}
+
+body.nesta-admin-theme #adminmenu li.menu-top:hover,
+body.nesta-admin-theme #adminmenu li.opensub > a.menu-top,
+body.nesta-admin-theme #adminmenu li > a.menu-top:focus {
+    background: rgba(255, 255, 255, 0.4);
+    color: #a0470f;
+    box-shadow: inset 3px 0 0 rgba(204, 90, 22, 0.4);
+}
+
+.folded body.nesta-admin-theme #adminmenu li.menu-top:hover,
+.folded body.nesta-admin-theme #adminmenu li.opensub > a.menu-top,
+.folded body.nesta-admin-theme #adminmenu li > a.menu-top:focus {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+body.nesta-admin-theme #adminmenu li.menu-top.wp-has-current-submenu > a,
+body.nesta-admin-theme #adminmenu li.menu-top.current > a {
+    background: rgba(255, 122, 24, 0.18);
+    color: #8a370b;
+}
+
+body.nesta-admin-theme #adminmenu .wp-submenu a:hover,
+body.nesta-admin-theme #adminmenu .wp-submenu a:focus {
+    color: #a0470f;
+    background: rgba(255, 122, 24, 0.12);
+}
+
+body.nesta-admin-theme #adminmenu .wp-submenu {
+    background: #fcfcfd;
+    color: #2f3744;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+}
+
+body.nesta-admin-theme #adminmenu .wp-submenu .wp-submenu-head {
+    color: #848c9a;
+    border-bottom-color: rgba(15, 23, 42, 0.07);
+}
+
+body.nesta-admin-theme #adminmenu .wp-submenu:before {
+    border-right-color: #ffffff;
+}
+
+body.nesta-admin-theme #adminmenu .wp-submenu:after {
+    border-right-color: rgba(15, 23, 42, 0.08);
+}
+
+body.nesta-admin-theme #adminmenu .wp-submenu a {
+    color: #2f3744;
+}
+
+
+/* Admin bar logo --------------------------------------------------------- */
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-nesta-dashboard > .ab-item {
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-nesta-visit-site > .ab-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-nesta-visit-site > .ab-item .dashicons {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.nesta-visit-site-icon {
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    transform: translateY(-1px);
+    color: inherit;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name > .ab-item {
+    color: #7d8694;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name.ab-item:hover,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name.ab-item:focus,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name > .ab-item:hover,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name > .ab-item:focus {
+    color: #cc5a16;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name > .ab-item .ab-icon:before {
+    color: #7d8694;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name > .ab-item:hover .ab-icon:before,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name > .ab-item:focus .ab-icon:before {
+    color: #cc5a16;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name > .ab-item::before {
+    color: #7d8694;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name:hover > .ab-item::before,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-site-name > .ab-item:focus::before {
+    color: #cc5a16;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-updates > .ab-item,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-updates > .ab-item .ab-label,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-updates > .ab-item .ab-icon:before {
+    color: #7d8694;
+    background: transparent;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-updates:hover > .ab-item,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-updates.ab-item:focus,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-updates:hover > .ab-item .ab-icon:before,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-updates:hover > .ab-item .ab-label {
+    color: #cc5a16;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-rank-math > .ab-item,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-rank-math > .ab-item .rank-math-icon svg,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-rank-math > .ab-item .rank-math-text {
+    color: #7d8694;
+    fill: #7d8694;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-rank-math:hover > .ab-item,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-rank-math > .ab-item:focus,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-rank-math:hover > .ab-item .rank-math-icon svg,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-rank-math > .ab-item:focus .rank-math-icon svg,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-rank-math:hover > .ab-item .rank-math-text,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-rank-math > .ab-item:focus .rank-math-text {
+    color: #cc5a16;
+    fill: #cc5a16;
+}
+
+body.nesta-admin-theme #wpadminbar .ab-item,
+body.nesta-admin-theme #wpadminbar a.ab-item,
+body.nesta-admin-theme #wpadminbar .ab-icon:before {
+    color: #7d8694;
+    transition: color 0.15s ease;
+}
+
+body.nesta-admin-theme #wpadminbar .ab-item:hover,
+body.nesta-admin-theme #wpadminbar .ab-item:focus,
+body.nesta-admin-theme #wpadminbar .ab-top-menu > li:hover > .ab-item,
+body.nesta-admin-theme #wpadminbar .ab-top-menu > li > .ab-item:focus {
+    color: #cc5a16;
+}
+
+body.nesta-admin-theme #wpadminbar .ab-item:hover .ab-icon:before,
+body.nesta-admin-theme #wpadminbar .ab-item:focus .ab-icon:before,
+body.nesta-admin-theme #wpadminbar .ab-top-menu > li:hover > .ab-item .ab-icon:before,
+body.nesta-admin-theme #wpadminbar .ab-top-menu > li > .ab-item:focus .ab-icon:before {
+    color: #cc5a16;
+}
+
+body.nesta-admin-theme #wpadminbar .nesta-admin-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.nesta-admin-theme #wpadminbar .nesta-admin-logo img {
+    max-height: 26px;
+    width: auto;
+    display: block;
+}
+
+body.nesta-admin-theme .button-primary {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+body.nesta-admin-theme .button-primary:hover {
+    background: #1a43bc;
+    border-color: #1a43bc;
+}
+
+/* Hide Spectra/UAG nags --------------------------------------------------- */
+body.nesta-admin-theme .notice[class*="spectra"],
+body.nesta-admin-theme .notice[class*="uagb"],
+body.nesta-admin-theme .notice[class*="uag"],
+body.nesta-admin-theme #spectra-telemetry-notice,
+body.nesta-admin-theme .spectra-notice {
+    display: none !important;
+}
+
+/* Nesta portal layout ----------------------------------------------------- */
+.wrap.nesta-dashboard {
+    max-width: 1200px;
+    margin: 24px auto 40px;
+    padding: 0 24px 24px;
+}
+
+.nesta-alert {
+    margin-bottom: 24px;
+    padding: 18px 24px;
+    border-radius: 18px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+    position: relative;
+    padding-right: 60px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nesta-alert strong {
+    display: block;
+    font-size: 16px;
+}
+
+.nesta-alert p {
+    margin: 6px 0 0;
+    color: #0f172a;
+}
+
+.nesta-alert--with-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+}
+
+.nesta-alert__content {
+    flex: 1 1 220px;
+    min-width: 200px;
+}
+
+.nesta-alert__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.nesta-alert--success {
+    background: #f0fdf4;
+    border-color: rgba(34, 197, 94, 0.35);
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.18);
+}
+
+.nesta-alert--success strong {
+    color: #166534;
+}
+
+.nesta-alert--error {
+    background: #fef2f2;
+    border-color: rgba(239, 68, 68, 0.35);
+    box-shadow: 0 15px 35px rgba(239, 68, 68, 0.18);
+}
+
+.nesta-alert--error strong {
+    color: #b91c1c;
+}
+
+.nesta-alert--error p {
+    color: #7f1d1d;
+}
+
+.nesta-alert__close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border: none;
+    background: rgba(15, 23, 42, 0.08);
+    color: #111927;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.nesta-alert__close:hover,
+.nesta-alert__close:focus {
+    background: rgba(204, 90, 22, 0.18);
+    color: #a0440f;
+    transform: translateY(-1px);
+}
+
+.nesta-alert.is-hidden {
+    opacity: 0;
+    transform: translateY(-6px);
+}
+
+.nesta-stepper {
+    display: flex;
+    gap: 16px;
+    margin: 0 0 18px;
+}
+
+.nesta-stepper--compact {
+    gap: 12px;
+    margin: 0 0 6px;
+    padding: 4px 0;
+}
+
+.nesta-stepper a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #fff;
+    color: #475467;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nesta-stepper-button,
+.button.nesta-stepper-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #fff;
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+}
+
+.nesta-stepper-button:hover,
+.nesta-stepper-button:focus,
+.button.nesta-stepper-button:hover,
+.button.nesta-stepper-button:focus {
+    border-color: rgba(204, 90, 22, 0.35);
+    color: #a0440f;
+}
+
+.nesta-stepper-button .dashicons {
+    font-size: 15px;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: #fff5ed;
+    color: #cc5a16;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nesta-stepper a.is-active {
+    border-color: rgba(204, 90, 22, 0.4);
+    box-shadow: 0 10px 25px rgba(204, 90, 22, 0.18);
+}
+
+.nesta-stepper a.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.nesta-stepper--compact a {
+    padding: 8px 14px;
+}
+
+.nesta-stepper--compact .nesta-reset-form {
+    margin-left: auto;
+}
+
+.nesta-stepper__number {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: #fff5ed;
+    color: #cc5a16;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.nesta-dashboard *,
+.nesta-dashboard *:before,
+.nesta-dashboard *:after {
+    box-sizing: border-box;
+}
+
+body.nesta-admin-theme a {
+    color: #0f172a;
+    transition: color 0.15s ease;
+    text-decoration: none;
+}
+
+body.nesta-admin-theme a:hover,
+body.nesta-admin-theme a:focus {
+    color: #cc5a16;
+}
+
+.nesta-hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    background: #ffffff;
+    color: #111927;
+    border-radius: 24px;
+    padding: 42px;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.nesta-hero__content {
+    flex: 1 1 420px;
+}
+
+.nesta-hero__actions {
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
+
+.nesta-hero h1 {
+    margin: 6px 0 16px;
+    font-size: 38px;
+    line-height: 1.1;
+}
+
+.nesta-hero p {
+    margin: 0;
+    color: #4b5565;
+    font-size: 18px;
+}
+
+.nesta-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 13px;
+    margin: 0 0 8px;
+    color: rgba(15, 23, 42, 0.55);
+}
+
+.nesta-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 16px;
+    background: linear-gradient(120deg, #ff8a45, #febb6b);
+    color: #4c1d08;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 15px 30px rgba(255, 138, 69, 0.35);
+}
+
+.nesta-button.is-link {
+    background: rgba(204, 90, 22, 0.1);
+    box-shadow: none;
+    color: #cc5a16;
+    padding: 10px 20px;
+}
+
+.nesta-button.is-link:hover,
+.nesta-button.is-link:focus {
+    background: rgba(204, 90, 22, 0.18);
+    color: #9a3a07;
+}
+
+.nesta-button--with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nesta-button--outline,
+.button.nesta-button--outline {
+    border-radius: 14px !important;
+    border: 1.5px solid rgba(226, 107, 41, 0.4) !important;
+    background: #ffffff !important;
+    color: #465266 !important;
+    padding: 8px 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    box-shadow: none !important;
+}
+
+.nesta-button--outline:hover,
+.nesta-button--outline:focus,
+.button.nesta-button--outline:hover,
+.button.nesta-button--outline:focus {
+    border-color: rgba(204, 90, 22, 0.55);
+    color: #a0440f;
+}
+
+.nesta-button--launch,
+.button.nesta-button--launch {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 26px;
+    border-radius: 999px !important;
+    border: 1.5px solid rgba(210, 92, 32, 0.55) !important;
+    background: linear-gradient(120deg, #ffc8a4, #ff8f5c) !important;
+    color: #3a1b0d !important;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    box-shadow: 0 16px 28px rgba(255, 122, 24, 0.25);
+    gap: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.nesta-button--launch .nesta-button__label,
+.nesta-button--launch .nesta-button__sparkle,
+.button.nesta-button--launch .nesta-button__label,
+.button.nesta-button--launch .nesta-button__sparkle {
+    position: relative;
+    z-index: 1;
+}
+
+.nesta-button__sparkle {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.25);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #3a1b0d;
+    font-size: 15px;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.nesta-install-button {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.nesta-install-button.is-disabled {
+    background: rgba(15, 23, 42, 0.06);
+    color: rgba(15, 23, 42, 0.5);
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
+}
+
+.nesta-button--danger,
+.button.nesta-button--danger {
+    border: none;
+    background: linear-gradient(120deg, #f87171, #dc2626);
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    box-shadow: none;
+    text-transform: none;
+    letter-spacing: 0;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nesta-button--danger .dashicons,
+.button.nesta-button--danger .dashicons {
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.nesta-button--danger:hover,
+.nesta-button--danger:focus,
+.button.nesta-button--danger:hover,
+.button.nesta-button--danger:focus {
+    background: linear-gradient(120deg, #dc2626, #b91c1c);
+    color: #fff;
+}
+
+.nesta-quick-grid {
+    margin-top: -40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.nesta-quick-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px 22px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: #0f172a;
+    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(65, 78, 106, 0.6);
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.nesta-quick-card:hover,
+.nesta-quick-card:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.12);
+    border-color: rgba(15, 23, 42, 0.25);
+}
+
+.nesta-quick-card span.dashicons {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #fff1ed;
+    color: #cc5a16;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: inset 0 0 0 1px rgba(255, 122, 24, 0.25);
+}
+
+.nesta-quick-card .nesta-quick-card__arrow {
+    color: #2f3643;
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nesta-quick-card .nesta-quick-card__arrow::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.nesta-panel {
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 26px;
+    padding: 32px;
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.nesta-panel--quickstart {
+    background: #fffdf8;
+}
+
+.nesta-panel__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.nesta-panel__actions {
+    display: flex;
+    align-items: center;
+}
+
+.nesta-back-form {
+    margin: 0;
+}
+
+.nesta-back-form .button {
+    border-radius: 16px;
+    padding: 10px 18px;
+}
+
+.nesta-quick-start__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.nesta-template-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.nesta-template-card {
+    position: relative;
+    display: block;
+}
+
+.nesta-template-card input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nesta-template-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 18px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+    min-height: 180px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.nesta-template-card__body strong {
+    font-size: 16px;
+    color: #0f172a;
+}
+
+.nesta-template-card__body p {
+    margin: 0;
+    color: #555f73;
+    line-height: 1.4;
+}
+
+.nesta-template-card__body img {
+    width: 100%;
+    height: 320px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: top;
+    background: linear-gradient(135deg, #f3f4f6, #fef3c7);
+    box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.04);
+}
+
+.nesta-template-card input:checked + .nesta-template-card__body {
+    border-color: #cc5a16;
+    box-shadow: 0 18px 45px rgba(204, 90, 22, 0.28);
+    transform: translateY(-2px);
+}
+
+.nesta-template-card--standalone {
+    display: flex;
+    flex-direction: column;
+}
+
+.nesta-template-card--standalone form {
+    margin-top: 12px;
+    display: flex;
+}
+
+.nesta-selected-template {
+    margin-bottom: 8px;
+}
+
+.nesta-template-card--active .nesta-template-card__body {
+    border-color: #cc5a16;
+    box-shadow: 0 18px 45px rgba(204, 90, 22, 0.25);
+}
+
+.nesta-template-card__link {
+    margin: 14px 18px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #cc5a16;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nesta-template-card__link:hover,
+.nesta-template-card__link:focus {
+    color: #9a3a07;
+}
+
+.nesta-customize-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.nesta-field--logo .nesta-logo-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nesta-logo-dropzone {
+    border: 1px dashed rgba(15, 23, 42, 0.2);
+    border-radius: 16px;
+    width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #fdfbf9, #f4f7fb);
+    box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.03);
+    cursor: pointer;
+}
+
+.nesta-logo-dropzone.has-image {
+    padding: 10px;
+}
+
+.nesta-logo-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+.nesta-logo-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.nesta-logo-empty {
+    text-align: center;
+    color: #7b8699;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.nesta-logo-empty .dashicons {
+    font-size: 42px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.nesta-logo-upload__input {
+    display: none;
+}
+
+.nesta-logo-remove {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #5a6476;
+}
+
+.nesta-customize-layout__right .nesta-template-card__body img {
+    height: 260px;
+}
+
+.nesta-install-button {
+    width: 100%;
+    border-radius: 18px;
+    border: none;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(120deg, #ff8a45, #febb6b);
+    color: #4c1d08;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(255, 138, 69, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nesta-install-button:hover,
+.nesta-install-button:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(255, 138, 69, 0.45);
+}
+.nesta-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.nesta-form-grid--tokens {
+    margin-top: 8px;
+}
+
+.nesta-field label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(15, 23, 42, 0.65);
+    margin-bottom: 6px;
+}
+
+.nesta-field input {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    padding: 10px 14px;
+    background: #fff;
+    font-size: 15px;
+    color: #0f172a;
+    box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+.nesta-field textarea,
+.nesta-field select {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    padding: 10px 14px;
+    background: #fff;
+    font-size: 15px;
+    color: #0f172a;
+    box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+.nesta-color-picker__input {
+    width: 100%;
+    height: 52px;
+    border-radius: 16px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #fff;
+    padding: 0;
+    box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.nesta-color-picker__input::-webkit-color-swatch {
+    border-radius: 14px;
+    border: none;
+}
+
+.nesta-color-picker__input::-webkit-color-swatch-wrapper {
+    padding: 6px;
+    border-radius: 14px;
+}
+
+.nesta-color-picker__input::-moz-color-swatch {
+    border: none;
+    border-radius: 14px;
+}
+
+.nesta-loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(3px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
+
+.nesta-loading-overlay.is-visible {
+    display: flex;
+}
+
+.nesta-loading-overlay__dialog {
+    background: #fff;
+    padding: 28px 32px;
+    border-radius: 24px;
+    box-shadow: 0 35px 80px rgba(15, 23, 42, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.nesta-loading-overlay__spinner {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 4px solid rgba(204, 90, 22, 0.2);
+    border-top-color: #cc5a16;
+    animation: nesta-spin 0.9s linear infinite;
+}
+
+.nesta-loading-overlay__dialog p {
+    margin: 0;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.nesta-button.is-busy,
+.nesta-install-button.is-busy,
+.button.is-busy {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+@keyframes nesta-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.nesta-launch-summary {
+    background: #fff;
+    border-radius: 22px;
+    padding: 24px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.nesta-launch-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nesta-launch-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #111827;
+}
+
+.nesta-launch-list span a {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nesta-launch-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.nesta-quick-start__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.nesta-button--save,
+.button.nesta-button--save {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 8px 16px;
+    border: none !important;
+    background: #f4f7fb !important;
+    color: #283149 !important;
+    box-shadow: 0 8px 14px rgba(15, 23, 42, 0.08) !important;
+    font-weight: 600;
+}
+
+.nesta-button--save .dashicons {
+    font-size: 18px;
+}
+
+.nesta-actions-separator {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    color: rgba(15, 23, 42, 0.5);
+    display: inline-flex;
+    align-items: center;
+}
+
+.nesta-builder-actions {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.nesta-quick-start__actions p {
+    margin: 0;
+    color: #4b5565;
+    font-size: 14px;
+}
+
+.nesta-token-json {
+    margin-top: 12px;
+}
+
+.nesta-token-json textarea {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #fff;
+    min-height: 160px;
+    box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+.nesta-token-json__actions {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nesta-token-sections.is-collapsed {
+    display: none;
+}
+
+.nesta-token-section {
+    margin-top: 24px;
+}
+
+.nesta-token-toggle__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: rgba(204, 90, 22, 0.15);
+    color: #cc5a16;
+    font-size: 13px;
+}
+
+.nesta-token-section h3 {
+    margin: 0 0 10px;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(15, 23, 42, 0.65);
+}
+
+.nesta-task-list {
+    list-style: none;
+    margin: 24px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 16px;
+}
+
+.nesta-task-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #0f172a;
+}
+
+.nesta-task-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1d4ed8;
+    box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.18);
+}
+
+.nesta-panel--support {
+    background: #f6f9ff;
+}
+
+.nesta-settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.nesta-settings-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 24px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nesta-settings-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0f172a;
+}
+
+.nesta-settings-card form {
+    margin: 0;
+}
+
+.nesta-settings-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.nesta-support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.nesta-info-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 24px;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nesta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #1d4ed8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nesta-panel--checklist {
+    background: #fdfbf9;
+}
+
+.nesta-checklist {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nesta-checklist li {
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px 16px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.07);
+}
+
+.nesta-checklist label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #111927;
+}
+
+.nesta-checklist input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+}
+
+.nesta-checklist__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.button-link-delete {
+    background: transparent;
+    border: none;
+    color: #cc5a16;
+    cursor: pointer;
+    padding: 0 6px;
+    height: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    .wrap.nesta-dashboard {
+        padding: 0 16px 32px;
+    }
+
+    .nesta-hero {
+        padding: 32px;
+    }
+
+    .nesta-quick-card {
+        grid-template-columns: 1fr;
+    }
+
+    .nesta-panel__header {
+        flex-direction: column;
+    }
+}
+.nesta-quick-card__arrow {
+    color: #94a3b8;
+}
+
+.nesta-panel__header h2 {
+    margin: 0;
+}
+
+.nesta-link .dashicons {
+    font-size: 14px;
+}
+.nesta-template-card__preview {
+    position: relative;
+}
+
+.nesta-template-preview-trigger {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background: rgba(15, 23, 42, 0.75);
+    color: #fff;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nesta-template-preview-trigger:hover,
+.nesta-template-preview-trigger:focus {
+    background: rgba(15, 23, 42, 0.9);
+    transform: translateY(-1px);
+}
+
+.nesta-template-preview-trigger .dashicons {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.nesta-reset-modal,
+.nesta-template-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 30px;
+}
+
+.nesta-reset-modal.is-visible,
+.nesta-template-modal.is-visible {
+    display: flex;
+}
+
+.nesta-reset-modal__dialog,
+.nesta-template-modal__dialog {
+    background: #fff;
+    border-radius: 24px;
+    max-width: 980px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 80px rgba(15, 23, 42, 0.3);
+}
+
+.nesta-reset-modal__dialog {
+    max-width: 440px;
+    padding: 32px;
+    text-align: center;
+}
+
+.nesta-template-modal__header {
+    padding: 18px 28px;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nesta-template-modal__header h3 {
+    margin: 0;
+}
+
+.nesta-template-modal__close {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    color: #475467;
+}
+
+.nesta-template-modal__body {
+    padding: 0 28px 28px;
+    overflow: auto;
+}
+
+.nesta-template-modal__body img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+}
+
+.nesta-reset-modal__icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+    margin: 0 auto 18px;
+    background: rgba(204, 90, 22, 0.12);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #cc5a16;
+    font-size: 34px;
+    box-shadow: inset 0 0 0 1px rgba(204, 90, 22, 0.28);
+}
+
+.nesta-reset-modal__dialog h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.nesta-reset-modal__dialog p {
+    margin: 0 0 18px;
+    color: #475467;
+}
+
+.nesta-reset-modal__actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nesta-reset-modal__actions .button {
+    min-width: 150px;
+    justify-content: center;
+}
+.nesta-button-pill {
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #fff;
+    color: #475467;
+    font-weight: 600;
+    padding: 10px 20px;
+    box-shadow: none;
+}
+
+.nesta-button-pill:hover,
+.nesta-button-pill:focus {
+    border-color: rgba(204, 90, 22, 0.4);
+    box-shadow: 0 10px 25px rgba(204, 90, 22, 0.18);
+    color: #cc5a16;
+}
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-new-content > .ab-item,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-new-content > .ab-item .ab-icon:before,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-new-content > .ab-item .ab-label {
+    color: #7d8694;
+}
+
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-new-content:hover > .ab-item,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-new-content > .ab-item:focus,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-new-content:hover > .ab-item .ab-icon:before,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-new-content > .ab-item:focus .ab-icon:before,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-new-content:hover > .ab-item .ab-label,
+body.nesta-admin-theme #wpadminbar #wp-admin-bar-new-content > .ab-item:focus .ab-label {
+    color: #cc5a16;
+}
