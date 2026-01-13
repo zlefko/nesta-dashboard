@@ -14,3 +14,5 @@
 !app/public/wp-content/mu-plugins/nesta-dashboard.php
 !app/public/wp-content/mu-plugins/nesta-dashboard/
 !app/public/wp-content/mu-plugins/nesta-dashboard/**
+
+**/.DS_Store
