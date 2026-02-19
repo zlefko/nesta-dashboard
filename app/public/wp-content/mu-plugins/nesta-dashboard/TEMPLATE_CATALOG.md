@@ -64,9 +64,17 @@ If you want all templates to use the shared media bundle, set this in `manifest.
 ```
 
 When using the shared bundle, you can omit `bundle/uploads.zip` from the zip entirely.
-Make sure the MU plugin ships with the shared bundle at:
+The MU plugin will look for a shared copy at:
+
+- `wp-content/uploads/nesta-shared/uploads.zip`
+
+If it does not exist yet, it will fall back to the bundled file at:
 
 - `app/public/wp-content/mu-plugins/nesta-dashboard/templates/shared/uploads.zip`
+
+If neither file exists, the MU plugin will download the shared bundle from:
+
+- `https://getnesta.com/nesta-templates/shared/uploads.zip`
 
 ## Workflow
 

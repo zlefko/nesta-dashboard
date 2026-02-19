@@ -3,7 +3,7 @@
  * Plugin Name: Nesta Dashboard
  * Description: Custom white-label admin experience for Nesta Sites clients.
  * Author: Nesta Sites
- * Version: 1.2.1
+ * Version: 1.2.6
  *
  * @package NestaDashboard
  */
@@ -22,10 +22,11 @@ final class Nesta_Dashboard {
 	const SUPPORT_URL        = 'https://nestasites.com/support';
 	const QUICK_GUIDES_URL   = 'https://nestasites.com/support';
 	const LOGIN_LOGO_URL     = ''; // Optional: set to a custom logo URL for the login screen.
-	const PLUGIN_VERSION       = '1.2.1';
-	const TEMPLATE_CATALOG_URL = 'https://getnesta.com/nesta-templates/templates.json';
-	const TEMPLATE_CACHE_DIR   = 'nesta-templates';
-	const MU_UPDATE_MANIFEST_URL = 'https://github.com/zlefko/nesta-dashboard/releases/latest/download/manifest.json';
+	const PLUGIN_VERSION         = '1.2.6';
+	const TEMPLATE_CATALOG_URL   = 'https://getnesta.com/nesta-templates/templates.json';
+	const TEMPLATE_CACHE_DIR     = 'nesta-templates';
+	const MU_UPDATE_MANIFEST_URL = 'https://getnesta.com/nesta-updates/mu-plugin/manifest.json';
+	const SHARED_UPLOADS_URL     = 'https://getnesta.com/nesta-templates/shared/uploads.zip';
 	const MU_UPDATE_OPTION       = 'nesta_mu_plugin_update_state';
 
 	/**
@@ -448,13 +449,84 @@ final class Nesta_Dashboard {
 		}
 
 		if ( false !== strpos( $normalized, 'shared/uploads.zip' ) ) {
-			$shared_path = plugin_dir_path( __FILE__ ) . 'templates/shared/uploads.zip';
-			if ( file_exists( $shared_path ) ) {
+			$shared_path = $this->ensure_shared_uploads_asset();
+			if ( $shared_path ) {
 				return $shared_path;
 			}
 		}
 
 		return '';
+	}
+
+	/**
+	 * Return the shared uploads directory and file path.
+	 *
+	 * @return array{dir:string,path:string}
+	 */
+	private function get_shared_uploads_info() {
+		$uploads  = wp_upload_dir();
+		$base_dir = ! empty( $uploads['basedir'] ) ? $uploads['basedir'] : trailingslashit( WP_CONTENT_DIR ) . 'uploads';
+		$dir      = trailingslashit( $base_dir ) . 'nesta-shared';
+
+		return array(
+			'dir'  => $dir,
+			'path' => trailingslashit( $dir ) . 'uploads.zip',
+		);
+	}
+
+	/**
+	 * Ensure the shared uploads zip is available in a persistent location.
+	 *
+	 * @return string Shared uploads path if found or created, empty string otherwise.
+	 */
+	private function ensure_shared_uploads_asset() {
+		$shared = $this->get_shared_uploads_info();
+		if ( file_exists( $shared['path'] ) ) {
+			return $shared['path'];
+		}
+
+		$plugin_shared = plugin_dir_path( __FILE__ ) . 'templates/shared/uploads.zip';
+		if ( ! file_exists( $plugin_shared ) ) {
+			$downloaded = $this->download_shared_uploads( $shared['path'] );
+			return $downloaded ? $downloaded : '';
+		}
+
+		if ( ! wp_mkdir_p( $shared['dir'] ) ) {
+			return $plugin_shared;
+		}
+
+		@copy( $plugin_shared, $shared['path'] );
+
+		return file_exists( $shared['path'] ) ? $shared['path'] : $plugin_shared;
+	}
+
+	/**
+	 * Download the shared uploads bundle to the uploads directory.
+	 *
+	 * @param string $target_path Target path for the shared bundle.
+	 * @return string Shared uploads path if downloaded, empty string otherwise.
+	 */
+	private function download_shared_uploads( $target_path ) {
+		if ( empty( self::SHARED_UPLOADS_URL ) ) {
+			return '';
+		}
+
+		$target_dir = dirname( $target_path );
+		if ( ! wp_mkdir_p( $target_dir ) ) {
+			return '';
+		}
+
+		require_once ABSPATH . 'wp-admin/includes/file.php';
+
+		$temp_file = download_url( self::SHARED_UPLOADS_URL, 60 );
+		if ( is_wp_error( $temp_file ) ) {
+			return '';
+		}
+
+		$copied = @copy( $temp_file, $target_path );
+		@unlink( $temp_file );
+
+		return $copied && file_exists( $target_path ) ? $target_path : '';
 	}
 
 	/**
@@ -2620,6 +2692,9 @@ final class Nesta_Dashboard {
 			return new WP_Error( 'nesta_mu_filesystem_missing', __( 'Filesystem handler is unavailable.', 'nesta-dashboard' ) );
 		}
 
+		// Preserve shared uploads before swapping the plugin folder.
+		$this->ensure_shared_uploads_asset();
+
 		$mu_dir     = trailingslashit( WPMU_PLUGIN_DIR );
 		$target_dir = $mu_dir . 'nesta-dashboard';
 		$backup_dir = $mu_dir . 'nesta-dashboard.backup-' . gmdate( 'Ymd-His' );
@@ -2632,6 +2707,17 @@ final class Nesta_Dashboard {
 		}
 
 		if ( ! $wp_filesystem->move( $source_dir, $target_dir, true ) ) {
+			$copied = copy_dir( $source_dir, $target_dir );
+			if ( is_wp_error( $copied ) ) {
+				if ( $wp_filesystem->is_dir( $backup_dir ) ) {
+					$wp_filesystem->move( $backup_dir, $target_dir, true );
+				}
+				$this->delete_template_dir( $temp_dir );
+				return new WP_Error( 'nesta_mu_replace_failed', $copied->get_error_message() );
+			}
+		}
+
+		if ( ! $wp_filesystem->is_dir( $target_dir ) ) {
 			if ( $wp_filesystem->is_dir( $backup_dir ) ) {
 				$wp_filesystem->move( $backup_dir, $target_dir, true );
 			}
@@ -2640,7 +2726,9 @@ final class Nesta_Dashboard {
 		}
 
 		if ( $wp_filesystem->exists( $source_loader ) ) {
-			$wp_filesystem->move( $source_loader, $mu_dir . 'nesta-dashboard.php', true );
+			if ( ! $wp_filesystem->move( $source_loader, $mu_dir . 'nesta-dashboard.php', true ) ) {
+				$wp_filesystem->copy( $source_loader, $mu_dir . 'nesta-dashboard.php', true );
+			}
 		}
 
 		$this->delete_template_dir( $temp_dir );

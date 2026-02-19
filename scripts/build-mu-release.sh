@@ -21,7 +21,8 @@ rm -f "$ZIP_PATH"
 (
   cd "$PLUGIN_DIR"
   zip -r "$ZIP_PATH" "nesta-dashboard" "nesta-dashboard.php" \
-    -x "*/.DS_Store" -x "*.DS_Store"
+    -x "*/.DS_Store" -x "*.DS_Store" \
+    -x "nesta-dashboard/templates/shared/uploads.zip"
 )
 
 echo "$ZIP_PATH"
